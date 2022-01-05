@@ -47,3 +47,4 @@ create database link crvbdd_s1.fi.unam using 'CRVBDD_S1';
 create database link crvbdd_s2.fi.unam using 'CRVBDD_S2';
 --completar
 prompt LISTO!
+disconnect
