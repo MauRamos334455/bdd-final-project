@@ -1,7 +1,7 @@
---@Autor: Carolina Kennedy Villa
---        C. Mauricio Ramos Villaseñor
---@Fecha creación: 05/01/2021
---@Descripción: Eliminación y creación del usuario.
+-- @Autor: Carolina Kennedy Villa
+--         C. Mauricio Ramos Villaseñor
+-- @Fecha creación: 05/01/2021
+-- @Descripción: Eliminación y creación del usuario.
 
 declare
   v_count number(1,0);

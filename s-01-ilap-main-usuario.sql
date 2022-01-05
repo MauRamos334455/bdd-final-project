@@ -1,7 +1,7 @@
---@Autor: Carolina Kennedy Villa
---        C. Mauricio Ramos Villaseñor
---@Fecha creación: 05/01/2021
---@Descripción: Creación de usuarios en los 4 nodos
+-- @Autor: Carolina Kennedy Villa
+--         C. Mauricio Ramos Villaseñor
+-- @Fecha creación: 05/01/2021
+-- @Descripción: Creación de usuarios en los 4 nodos
 
 clear screen
 whenever sqlerror exit rollback;
