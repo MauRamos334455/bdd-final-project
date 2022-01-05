@@ -13,8 +13,8 @@ connect ilap_bdd/ilap@crvbdd_s1
 -- PDB local
 create database link crvbdd_s2.fi.unam using 'CRVBDD_S2';
 --PDB remotas
-create database link arcbd_s1.fi.unam using 'CKVBDD_S1';
-create database link arcbd_s2.fi.unam using 'CKVBDD_S2';
+create database link ckvbdd_s1.fi.unam using 'CKVBDD_S1';
+create database link ckvbdd_s2.fi.unam using 'CKVBDD_S2';
 
 prompt ============================
 prompt CREANDO LIGAS EN: crvbdd_s2
@@ -23,8 +23,8 @@ connect ilap_bdd/ilap@crvbdd_s2
 -- PDB local
 create database link crvbdd_s1.fi.unam using 'CRVBDD_S1';
 --PDB remotas
-create database link arcbd_s1.fi.unam using 'CKVBDD_S1';
-create database link arcbd_s2.fi.unam using 'CKVBDD_S2';
+create database link ckvbdd_s1.fi.unam using 'CKVBDD_S1';
+create database link ckvbdd_s2.fi.unam using 'CKVBDD_S2';
 
 prompt ============================
 prompt CREANDO LIGAS EN: ckvbdd_s1
