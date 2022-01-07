@@ -62,7 +62,35 @@ where f1.laptop_id = f2.laptop_id;
 --
 -- H_STATUS_LAPTOP
 --
-create or replace view h_status_laptop as
-select h_status_laptop_id, laptop_id, fecha_status, status_laptop_id from h_status_laptop_f1
+create or replace view historico_status_laptop as
+select h_status_laptop_id, laptop_id, fecha_status, status_laptop_id from historico_status_f1
 union all
-select h_status_laptop_id, laptop_id, fecha_status, status_laptop_id from h_status_laptop_f2;
+select h_status_laptop_id, laptop_id, fecha_status, status_laptop_id from historico_status_f2;
+
+--
+-- TIPO_MONITOR
+--
+create or replace view tipo_monitor as
+select tipo_monitor_id,clave,descripcion
+from tipo_monitor_r1;
+
+--
+-- TIPO_ALMACENAMIENTO
+--
+create or replace view tipo_almacenamiento as
+select tipo_almacenamiento_id,clave,descripcion
+from tipo_almacenamiento_r1;
+
+--
+-- TIPO_PROCESADOR
+--
+create or replace view tipo_procesador as
+select tipo_procesador_id,clave,descripcion
+from tipo_procesador_r1;
+
+--
+-- TIPO_TARJETA_VIDEO
+--
+create or replace view tipo_tarjeta_video as
+select tipo_tarjeta_video_id,clave,descripcion
+from tipo_tarjeta_video_r1;
