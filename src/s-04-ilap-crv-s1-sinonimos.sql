@@ -34,8 +34,8 @@ create or replace synonym laptop_f5 for laptop_f5_crv_s2@crvbdd_s2;
 create or replace synonym laptop_inventario_f1 for laptop_inventario_f1_ckv_s1@ckvbdd_s1;
 create or replace synonym laptop_inventario_f2 for laptop_inventario_f2_crv_s1;
 
-create or replace synonym historico_status_f1 for historico_status_f1_ckv_s1@ckvbdd_s1;
-create or replace synonym historico_status_f2 for historico_status_f2_ckv_s2@ckvbdd_s2;
+create or replace synonym historico_status_f1 for H_STATUS_LAPTOP_F1_CKV_S1@ckvbdd_s1;
+create or replace synonym historico_status_f2 for H_STATUS_LAPTOP_F2_CKV_S2@ckvbdd_s2;
 
 create or replace synonym tipo_monitor_r1 for tipo_monitor_r_ckv_s1@ckvbdd_s1;
 create or replace synonym tipo_monitor_r2 for tipo_monitor_r_ckv_s2@ckvbdd_s2;
