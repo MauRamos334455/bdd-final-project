@@ -33,18 +33,18 @@ from (
 prompt CREANDO VISTA PARA SERVICIO_LAPTOP...
 create or replace view servicio_laptop as
 select num_servicio,laptop_id,importe,diagnostico,
-  get_remote_serv_lap_f1_by_id(num_servicio,laptop_id),
+  get_remote_serv_lap_f1_by_id(num_servicio,laptop_id) factura,
   sucursal_id
 from servicio_laptop_f1
 union all
 select num_servicio,laptop_id,importe,diagnostico,
-  get_remote_serv_lap_f2_by_id(num_servicio,laptop_id),
+  get_remote_serv_lap_f2_by_id(num_servicio,laptop_id) factura,
   sucursal_id
 from servicio_laptop_f2
 union all
 select num_servicio,laptop_id,importe,diagnostico,factura,sucursal_id
 from servicio_laptop_f3
 select num_servicio,laptop_id,importe,diagnostico,
-  get_remote_serv_lap_f4_by_id(num_servicio,laptop_id),
+  get_remote_serv_lap_f4_by_id(num_servicio,laptop_id) factura,
   sucursal_id
 from servicio_laptop_f4;
