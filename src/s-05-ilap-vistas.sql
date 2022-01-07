@@ -40,22 +40,10 @@ union all
 select sucursal_id,dia_descanso,telefono_atencion from sucursal_taller_f4;
 
 --
--- SERVICIO_LAPTOP
---
-create or replace view servicio_laptop as
-select num_servicio,laptop_id,importe,diagnostico,factura,sucursal_id from servicio_laptop_f1
-union all
-select num_servicio,laptop_id,importe,diagnostico,factura,sucursal_id from servicio_laptop_f2
-union all
-select num_servicio,laptop_id,importe,diagnostico,factura,sucursal_id from servicio_laptop_f3
-union all
-select num_servicio,laptop_id,importe,diagnostico,factura,sucursal_id from servicio_laptop_f4;
-
---
 -- LAPTOP_INVENTARIO
 --
 create or replace view laptop_inventario as
-select f1.laptop_id,f1.fecha_status,f2.rfc_cliente,f2.num_cuenta,f1.status_laptop_id,f1.sucursal_id
+select f1.laptop_id,f1.fecha_status,f2.rfc_cliente,f2.num_tarjeta,f1.status_laptop_id,f1.sucursal_id
 from laptop_inventario_f1 f1, laptop_inventario_f2 f2
 where f1.laptop_id = f2.laptop_id;
 
