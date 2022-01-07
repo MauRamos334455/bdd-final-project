@@ -38,14 +38,10 @@ select
     (select count(*) from laptop_inventario_f1) as laptop_inventario_f1
     (select count(*) from laptop_inventario_f2) as laptop_inventario_f2
     (select count(*) from laptop_inventario_f3) as laptop_inventario_f3
-    (select count(*) from laptop_inventario_f4) as laptop_inventario_f4
-    (select count(*) from laptop_inventario_f5) as laptop_inventario_f5
 from dual;
 select
     (select count(*) from historico_status_f1) as historico_status_f1
     (select count(*) from historico_status_f2) as historico_status_f2
-    (select count(*) from historico_status_f3) as historico_status_f3
-    (select count(*) from historico_status_f4) as historico_status_f4
 from dual;
 select
     (select count(*) from tipo_monitor_r1) as tipo_monitor_r1
