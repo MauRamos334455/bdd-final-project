@@ -40,3 +40,23 @@ create or replace historico_status_f1 for historico_status_f1_ckv_s1@ckvbdd_s1;
 create or replace historico_status_f2 for historico_status_f2_ckv_s2@ckvbdd_s2;
 create or replace historico_status_f3 for historico_status_f3_crv_s1;
 create or replace historico_status_f4 for historico_status_f4_crv_s2@crvbdd_s2;
+
+create or replace tipo_monitor_r1 for tipo_monitor_ckv_s1@ckvbdd_s1;
+create or replace tipo_monitor_r2 for tipo_monitor_ckv_s2@ckvbdd_s2;
+create or replace tipo_monitor_r3 for tipo_monitor_crv_s1;
+create or replace tipo_monitor_r4 for tipo_monitor_crv_s2@crvbdd_s2;
+
+create or replace tipo_almacenamiento_r1 for tipo_almacenamiento_ckv_s1@ckvbdd_s1;
+create or replace tipo_almacenamiento_r2 for tipo_almacenamiento_ckv_s2@ckvbdd_s2;
+create or replace tipo_almacenamiento_r3 for tipo_almacenamiento_crv_s1;
+create or replace tipo_almacenamiento_r4 for tipo_almacenamiento_crv_s2@crvbdd_s2;
+
+create or replace tipo_procesador_r1 for tipo_procesador_ckv_s1@ckvbdd_s1;
+create or replace tipo_procesador_r2 for tipo_procesador_ckv_s2@ckvbdd_s2;
+create or replace tipo_procesador_r3 for tipo_procesador_crv_s1;
+create or replace tipo_procesador_r4 for tipo_procesador_crv_s2@crvbdd_s2;
+
+create or replace tipo_tarjeta_video_r1 for tipo_tarjeta_video_ckv_s1@ckvbdd_s1;
+create or replace tipo_tarjeta_video_r2 for tipo_tarjeta_video_ckv_s2@ckvbdd_s2;
+create or replace tipo_tarjeta_video_r3 for tipo_tarjeta_video_crv_s1;
+create or replace tipo_tarjeta_video_r4 for tipo_tarjeta_video_crv_s2@crvbdd_s2;
