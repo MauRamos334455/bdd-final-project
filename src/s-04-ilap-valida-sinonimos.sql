@@ -36,8 +36,7 @@ select
 from dual;
 select
     (select count(*) from laptop_inventario_f1) as laptop_inventario_f1,
-    (select count(*) from laptop_inventario_f2) as laptop_inventario_f2,
-    (select count(*) from laptop_inventario_f3) as laptop_inventario_f3
+    (select count(*) from laptop_inventario_f2) as laptop_inventario_f2
 from dual;
 select
     (select count(*) from historico_status_f1) as historico_status_f1,
