@@ -47,3 +47,30 @@ select
     (select count(*) from historico_status_f3) as historico_status_f3
     (select count(*) from historico_status_f4) as historico_status_f4
 from dual;
+select
+    (select count(*) from tipo_monitor_r1) as tipo_monitor_r1
+    (select count(*) from tipo_monitor_r2) as tipo_monitor_r2
+    (select count(*) from tipo_monitor_r3) as tipo_monitor_r3
+    (select count(*) from tipo_monitor_r4) as tipo_monitor_r4
+from dual;
+
+select
+    (select count(*) from tipo_almacenamiento_r1) as tipo_almacenamiento_r1
+    (select count(*) from tipo_almacenamiento_r2) as tipo_almacenamiento_r2
+    (select count(*) from tipo_almacenamiento_r3) as tipo_almacenamiento_r3
+    (select count(*) from tipo_almacenamiento_r4) as tipo_almacenamiento_r4
+from dual;
+
+select
+    (select count(*) from tipo_procesador_r1) as tipo_procesador_r1
+    (select count(*) from tipo_procesador_r2) as tipo_procesador_r2
+    (select count(*) from tipo_procesador_r3) as tipo_procesador_r3
+    (select count(*) from tipo_procesador_r4) as tipo_procesador_r4
+from dual;
+
+select
+    (select count(*) from tipo_tarjeta_video_r1) as tipo_tarjeta_video_r1
+    (select count(*) from tipo_tarjeta_video_r2) as tipo_tarjeta_video_r2
+    (select count(*) from tipo_tarjeta_video_r3) as tipo_tarjeta_video_r3
+    (select count(*) from tipo_tarjeta_video_r4) as tipo_tarjeta_video_r4
+from dual;
