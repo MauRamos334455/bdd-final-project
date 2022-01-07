@@ -95,5 +95,5 @@ create global temporary table ts_servicio_laptop_f4(
   num_servicio number(10, 0) not null,
   laptop_id number(10, 0) not null,
   factura blob,
-  constraint ti_servicio_laptop_f4_pk primary key (num_servicio, laptop_id)
+  constraint ts_servicio_laptop_f4_pk primary key (num_servicio, laptop_id)
 );
