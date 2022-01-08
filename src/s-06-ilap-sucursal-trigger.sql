@@ -29,7 +29,7 @@ begin
           values(:new.sucursal_id, :new.clave, :new.es_taller, :new.es_venta, :new.nombre, :new.latitud, :new.longitud, :new.url);
         else
           raise_application_error(-20010,
-            'Valor incorrecto para el clave'
+            'Valor incorrecto para la clave'
             || 'clave: ' || :new.clave
             || 'Sólo se permite: NO, EA, WS o SO');
         end if;
@@ -60,7 +60,7 @@ begin
           delete from sucursal_f4 where sucursal_id = :old.sucursal_id;
         else
           raise_application_error(-20010,
-            'Valor incorrecto para el clave al eliminar'
+            'Valor incorrecto para la clave al eliminar'
             || 'clave: ' || :old.clave
             || 'Sólo se permite: NO, EA, WS o SO');
         end if;
