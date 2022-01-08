@@ -3,8 +3,8 @@
 -- @Fecha creación: 07/01/2021
 -- @Descripción: Trigger para operaciones DML en SUCURSAL
 
-create or replace trigger t_dml_sucursal
-instead of insert or update or delete on sucursal
+create or replace trigger t_dml_laptop_inventario
+instead of insert or update or delete on laptop_inventario
 declare
  
 begin
