@@ -16,7 +16,7 @@ begin
             caracteristicas_extras, tipo_tarjeta_video_id, 
             tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
           values (:new.laptop_id, :new.num_serie, :new.cantidad_ram,
-            :new.caracteristicas_extra, :new.tipo_tarjeta_video_id,
+            :new.caracteristicas_extras, :new.tipo_tarjeta_video_id,
             :new.tipo_almacenamiento_id, :new.tipo_monitor_id, 
             :new.tipo_procesador_id);
         else
@@ -24,7 +24,7 @@ begin
             caracteristicas_extras, laptop_reemplazo_id, tipo_tarjeta_video_id, 
             tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
           values (:new.laptop_id, :new.num_serie, :new.cantidad_ram,
-            :new.caracteristicas_extra, :new.laptop_reemplazo_id,
+            :new.caracteristicas_extras, :new.laptop_reemplazo_id,
             :new.tipo_tarjeta_video_id,:new.tipo_almacenamiento_id,
             :new.tipo_monitor_id, :new.tipo_procesador_id);
         end if;
@@ -34,7 +34,7 @@ begin
             caracteristicas_extras, tipo_tarjeta_video_id, 
             tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
           values (:new.laptop_id, :new.num_serie, :new.cantidad_ram,
-            :new.caracteristicas_extra, :new.tipo_tarjeta_video_id,
+            :new.caracteristicas_extras, :new.tipo_tarjeta_video_id,
             :new.tipo_almacenamiento_id, :new.tipo_monitor_id, 
             :new.tipo_procesador_id);
         else
@@ -42,7 +42,7 @@ begin
             caracteristicas_extras, laptop_reemplazo_id, tipo_tarjeta_video_id, 
             tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
           values (:new.laptop_id, :new.num_serie, :new.cantidad_ram,
-            :new.caracteristicas_extra, :new.laptop_reemplazo_id,
+            :new.caracteristicas_extras, :new.laptop_reemplazo_id,
             :new.tipo_tarjeta_video_id,:new.tipo_almacenamiento_id,
             :new.tipo_monitor_id, :new.tipo_procesador_id);
         end if;
@@ -52,7 +52,7 @@ begin
             caracteristicas_extras, tipo_tarjeta_video_id, 
             tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
           values (:new.laptop_id, :new.num_serie, :new.cantidad_ram,
-            :new.caracteristicas_extra, :new.tipo_tarjeta_video_id,
+            :new.caracteristicas_extras, :new.tipo_tarjeta_video_id,
             :new.tipo_almacenamiento_id, :new.tipo_monitor_id, 
             :new.tipo_procesador_id);
         else
@@ -60,7 +60,7 @@ begin
             caracteristicas_extras, laptop_reemplazo_id, tipo_tarjeta_video_id, 
             tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
           values (:new.laptop_id, :new.num_serie, :new.cantidad_ram,
-            :new.caracteristicas_extra, :new.laptop_reemplazo_id,
+            :new.caracteristicas_extras, :new.laptop_reemplazo_id,
             :new.tipo_tarjeta_video_id,:new.tipo_almacenamiento_id,
             :new.tipo_monitor_id, :new.tipo_procesador_id);
         end if;
@@ -70,7 +70,7 @@ begin
             caracteristicas_extras, tipo_tarjeta_video_id, 
             tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
           values (:new.laptop_id, :new.num_serie, :new.cantidad_ram,
-            :new.caracteristicas_extra, :new.tipo_tarjeta_video_id,
+            :new.caracteristicas_extras, :new.tipo_tarjeta_video_id,
             :new.tipo_almacenamiento_id, :new.tipo_monitor_id, 
             :new.tipo_procesador_id);
         else
@@ -78,7 +78,7 @@ begin
             caracteristicas_extras, laptop_reemplazo_id, tipo_tarjeta_video_id, 
             tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
           values (:new.laptop_id, :new.num_serie, :new.cantidad_ram,
-            :new.caracteristicas_extra, :new.laptop_reemplazo_id,
+            :new.caracteristicas_extras, :new.laptop_reemplazo_id,
             :new.tipo_tarjeta_video_id,:new.tipo_almacenamiento_id,
             :new.tipo_monitor_id, :new.tipo_procesador_id);
         end if;
