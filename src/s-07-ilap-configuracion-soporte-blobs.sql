@@ -3,15 +3,15 @@
 -- @Fecha creación: 07/01/2021
 -- @Descripción: Script empleado para configurar el soporte de datos BLOB.
 
-prompt Creando objetos para leer datos BLOB
-prompt Creando directorios
+prompt Creando objetos para leer datos BLOB...
+prompt Creando directorios...
 -- el usuario ilap_bdd debe tener el privilegio create any directory
 create or replace directory proyecto_final_facturas_dir
     as '/tmp/bdd/proyecto-final/imagenes/facturas';
 create or replace directory proyecto_final_laptops_dir
     as '/tmp/bdd/proyecto-final/imagenes/laptops';
 
-prompt creando funcion para leer datos BLOB
+prompt Creando funcion para leer datos BLOB...
 create or replace function fx_carga_blob(
     v_directory_name in varchar2,
     v_src_file_name in varchar2 ) return blob is
@@ -24,9 +24,9 @@ create or replace function fx_carga_blob(
 
 begin
     if dbms_lob.fileexists(v_src_blob) =0 then
-    raise_application_error(-20001, v_src_file_name
+      raise_application_error(-20001, v_src_file_name
         ||' El archivo no existe ');
-end if;
+    end if;
 
     --abre el archivo
     if dbms_lob.isopen(v_src_blob) = 0 then
@@ -35,10 +35,10 @@ end if;
     v_src_blob_size := dbms_lob.getlength(v_src_blob);
     --crea un objeto lob temporal
     dbms_lob.createtemporary(
-        lob_loc => v_dest_blob,
-        cache => true,
-        dur => dbms_lob.call
-);
+      lob_loc => v_dest_blob,
+      cache => true,
+      dur => dbms_lob.call
+    );
     --lee el archivo y escribe en el blob
     dbms_lob.loadblobfromfile(
         dest_lob => v_dest_blob,
@@ -46,7 +46,7 @@ end if;
         amount => dbms_lob.getlength(v_src_blob),
         dest_offset => v_dest_offset,
         src_offset => v_src_offset
-);
+    );
     --cerrando blob
     dbms_lob.close(v_src_blob);
     if v_src_blob_size <> dbms_lob.getlength(v_dest_blob) then

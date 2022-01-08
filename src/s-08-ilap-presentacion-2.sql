@@ -1,7 +1,8 @@
 -- @Autor: Carolina Kennedy Villa
 --         C. Mauricio Ramos Villaseñor
 -- @Fecha creación: 07/01/2021
---@Descripción: Archivo de carga inicial para catalogos replicados.
+-- @Descripción: Archivo de carga inicial para copias manuales de catálogos.
+
 clear screen
 whenever sqlerror exit rollback;
 --Para visualizar export NLS_LANG=SPANISH_SPAIN.WE8ISO8859P1
