@@ -77,7 +77,7 @@ begin
       when deleting then 
         select count(*) into v_count
         from sucursal_taller_f4
-        where sucursal_id = :new.sucursal_id;
+        where sucursal_id = :old.sucursal_id;
 
         if v_count > 0 then
           delete from servicio_laptop_f4
@@ -87,7 +87,7 @@ begin
         else 
           select count(*) into v_count
           from sucursal_taller_f2
-          where sucursal_id = :new.sucursal_id;
+          where sucursal_id = :old.sucursal_id;
           
           if v_count > 0 then
             delete from servicio_laptop_f2 
@@ -97,7 +97,7 @@ begin
           else
             select count(*) into v_count
             from sucursal_taller_f3
-            where sucursal_id = :new.sucursal_id;
+            where sucursal_id = :old.sucursal_id;
           
             if v_count > 0 then
               delete from servicio_laptop_f3 
@@ -106,7 +106,7 @@ begin
             else
               select count(*) into v_count
               from sucursal_taller_f1
-              where sucursal_id = :new.sucursal_id;
+              where sucursal_id = :old.sucursal_id;
             
               if v_count > 0 then
                 delete from servicio_laptop_f1
@@ -115,7 +115,7 @@ begin
               else
                 raise_application_error(-20020,
                   'Error de integridad para el campo sucursal_id : '
-                  ||  :new.sucursal_id
+                  ||  :old.sucursal_id
                   || ' No se encontró el registro padre en ningún fragmento.');
               end if;
             end if;
