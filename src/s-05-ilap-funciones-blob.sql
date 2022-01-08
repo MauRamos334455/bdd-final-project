@@ -57,6 +57,8 @@ begin
   -- Elimina los registros de la tabla temporal
   delete from ts_servicio_laptop_f1;
   -- Termina txn autónoma
+  commit;
+  return v_temp_pdf;
   exception
   when others then
   -- Si ocurre error, termina la txn autónoma.
@@ -88,6 +90,8 @@ begin
   -- Elimina los registros de la tabla temporal
   delete from ts_servicio_laptop_f2;
   -- Termina txn autónoma
+  commit;
+  return v_temp_pdf;
   exception
   when others then
   -- Si ocurre error, termina la txn autónoma.
@@ -119,6 +123,8 @@ begin
   -- Elimina los registros de la tabla temporal
   delete from ts_servicio_laptop_f3;
   -- Termina txn autónoma
+  commit;
+  return v_temp_pdf;
   exception
   when others then
   -- Si ocurre error, termina la txn autónoma.
@@ -150,6 +156,8 @@ begin
   -- Elimina los registros de la tabla temporal
   delete from ts_servicio_laptop_f4;
   -- Termina txn autónoma
+  commit;
+  return v_temp_pdf;
   exception
   when others then
   -- Si ocurre error, termina la txn autónoma.
