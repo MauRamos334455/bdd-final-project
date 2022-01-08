@@ -19,6 +19,9 @@ begin
     dbms_output.put_line(to_char(sysdate,v_formato)
         || ' Eliminando datos de SERVICIO_LAPTOP');
     delete from servicio_laptop;
+        dbms_output.put_line(to_char(sysdate,v_formato)
+      || ' Eliminando datos de LAPTOP');
+    delete from laptop;
     dbms_output.put_line(to_char(sysdate,v_formato)
         || ' Eliminando datos de TIPO_MONITOR');
     delete from tipo_monitor;
@@ -67,9 +70,6 @@ begin
     dbms_output.put_line(to_char(sysdate,v_formato)
       || ' Eliminando datos de TIPO_TARJETA_VIDEO_R4');
     delete from tipo_tarjeta_video_r4;
-    dbms_output.put_line(to_char(sysdate,v_formato)
-      || ' Eliminando datos de LAPTOP');
-    delete from laptop;
     dbms_output.put_line(to_char(sysdate,v_formato)
       || ' Eliminando datos de SUCURSAL_TALLER');
     delete from sucursal_taller;
