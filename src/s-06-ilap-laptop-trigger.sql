@@ -11,15 +11,6 @@ begin
   case
     when inserting then
       if substr(:new.num_serie,1,1) between 0 and 1 then
-        if :new.laptop_reemplazo_id is null then 
-          insert into laptop_f1(laptop_id, num_serie, cantidad_ram, 
-            caracteristicas_extras, tipo_tarjeta_video_id, 
-            tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
-          values (:new.laptop_id, :new.num_serie, :new.cantidad_ram,
-            :new.caracteristicas_extras, :new.tipo_tarjeta_video_id,
-            :new.tipo_almacenamiento_id, :new.tipo_monitor_id, 
-            :new.tipo_procesador_id);
-        else
           insert into laptop_f1(laptop_id, num_serie, cantidad_ram, 
             caracteristicas_extras, laptop_reemplazo_id, tipo_tarjeta_video_id, 
             tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
@@ -27,17 +18,7 @@ begin
             :new.caracteristicas_extras, :new.laptop_reemplazo_id,
             :new.tipo_tarjeta_video_id,:new.tipo_almacenamiento_id,
             :new.tipo_monitor_id, :new.tipo_procesador_id);
-        end if;
       elsif substr(:new.num_serie,1,1) between 6 and 9 then
-        if :new.laptop_reemplazo_id is null then 
-          insert into laptop_f2(laptop_id, num_serie, cantidad_ram, 
-            caracteristicas_extras, tipo_tarjeta_video_id, 
-            tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
-          values (:new.laptop_id, :new.num_serie, :new.cantidad_ram,
-            :new.caracteristicas_extras, :new.tipo_tarjeta_video_id,
-            :new.tipo_almacenamiento_id, :new.tipo_monitor_id, 
-            :new.tipo_procesador_id);
-        else
           insert into laptop_f2(laptop_id, num_serie, cantidad_ram, 
             caracteristicas_extras, laptop_reemplazo_id, tipo_tarjeta_video_id, 
             tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
@@ -45,17 +26,7 @@ begin
             :new.caracteristicas_extras, :new.laptop_reemplazo_id,
             :new.tipo_tarjeta_video_id,:new.tipo_almacenamiento_id,
             :new.tipo_monitor_id, :new.tipo_procesador_id);
-        end if;
       elsif substr(:new.num_serie,1,1) between 4 and 5 then
-        if :new.laptop_reemplazo_id is null then 
-          insert into laptop_f3(laptop_id, num_serie, cantidad_ram, 
-            caracteristicas_extras, tipo_tarjeta_video_id, 
-            tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
-          values (:new.laptop_id, :new.num_serie, :new.cantidad_ram,
-            :new.caracteristicas_extras, :new.tipo_tarjeta_video_id,
-            :new.tipo_almacenamiento_id, :new.tipo_monitor_id, 
-            :new.tipo_procesador_id);
-        else
           insert into laptop_f3(laptop_id, num_serie, cantidad_ram, 
             caracteristicas_extras, laptop_reemplazo_id, tipo_tarjeta_video_id, 
             tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
@@ -63,17 +34,7 @@ begin
             :new.caracteristicas_extras, :new.laptop_reemplazo_id,
             :new.tipo_tarjeta_video_id,:new.tipo_almacenamiento_id,
             :new.tipo_monitor_id, :new.tipo_procesador_id);
-        end if;
       elsif substr(:new.num_serie,1,1) between 2 and 3 then
-        if :new.laptop_reemplazo_id is null then 
-          insert into laptop_f4(laptop_id, num_serie, cantidad_ram, 
-            caracteristicas_extras, tipo_tarjeta_video_id, 
-            tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
-          values (:new.laptop_id, :new.num_serie, :new.cantidad_ram,
-            :new.caracteristicas_extras, :new.tipo_tarjeta_video_id,
-            :new.tipo_almacenamiento_id, :new.tipo_monitor_id, 
-            :new.tipo_procesador_id);
-        else
           insert into laptop_f4(laptop_id, num_serie, cantidad_ram, 
             caracteristicas_extras, laptop_reemplazo_id, tipo_tarjeta_video_id, 
             tipo_almacenamiento_id, tipo_monitor_id, tipo_procesador_id)
@@ -81,7 +42,6 @@ begin
             :new.caracteristicas_extras, :new.laptop_reemplazo_id,
             :new.tipo_tarjeta_video_id,:new.tipo_almacenamiento_id,
             :new.tipo_monitor_id, :new.tipo_procesador_id);
-        end if;
       else 
         raise_application_error(-20010,
           'Valor incorrecto para el numero de serie'

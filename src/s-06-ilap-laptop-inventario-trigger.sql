@@ -10,27 +10,11 @@ declare
 begin
   case
     when inserting then
-      if :new.sucursal_id is not null then
         insert into laptop_inventario_f1(laptop_id, fecha_status,sucursal_id,status_laptop_id)
         values(:new.laptop_id, :new.fecha_status, :new.sucursal_id, :new.status_laptop_id);
-      else
-        insert into laptop_inventario_f1(laptop_id, fecha_status,status_laptop_id)
-        values(:new.laptop_id, :new.fecha_status, :new.status_laptop_id);
-      end if;
 
-      if :new.rfc_cliente is not null and :new.num_tarjeta is not null then
         insert into laptop_inventario_f2(laptop_id, rfc_cliente, num_tarjeta)
         values(:new.laptop_id, :new.rfc_cliente, :new.num_tarjeta);
-      elsif :new.rfc_cliente is null and :new.num_tarjeta is not null then
-        insert into laptop_inventario_f2(laptop_id, num_tarjeta)
-        values(:new.laptop_id, :new.num_tarjeta);
-      elsif :new.rfc_cliente is not null and :new.num_tarjeta is null then
-        insert into laptop_inventario_f2(laptop_id, rfc_cliente)
-        values(:new.laptop_id, :new.rfc_cliente);
-      else
-        insert into laptop_inventario_f2(laptop_id)
-        values(:new.laptop_id);
-      end if; 
 
     when updating then
       raise_application_error(-20030, 

@@ -15,13 +15,8 @@ begin
       where sucursal_id = :new.sucursal_id;
       
       if v_count > 0 then
-        if :new.factura is null then
-          insert into servicio_laptop_f2(num_servicio, laptop_id, importe, diagnostico, sucursal_id)
-          values(:new.num_servicio, :new.laptop_id, :new.importe, :new.diagnostico, :new.sucursal_id);
-        else
           insert into servicio_laptop_f2(num_servicio, laptop_id, importe, diagnostico, factura, sucursal_id)
           values(:new.num_servicio, :new.laptop_id, :new.importe, :new.diagnostico, :new.factura, :new.sucursal_id);
-        end if;
 
       else
         select count(*) into v_count
@@ -29,10 +24,6 @@ begin
         where sucursal_id = :new.sucursal_id;
 
         if v_count > 0 then
-          if :new.factura is null then
-            insert into servicio_laptop_f1(num_servicio, laptop_id, importe, diagnostico, sucursal_id)
-            values(:new.num_servicio, :new.laptop_id, :new.importe, :new.diagnostico, :new.sucursal_id);
-          else
             insert into ti_servicio_laptop_f1(num_servicio, laptop_id, importe, diagnostico, factura, sucursal_id)
             values(:new.num_servicio, :new.laptop_id, :new.importe, :new.diagnostico, :new.factura, :new.sucursal_id);
 
@@ -41,17 +32,12 @@ begin
               from ti_servicio_laptop_f1
               where num_servicio = :new.num_servicio
               and laptop_id = :new.laptop_id;
-          end if;
         else 
           select count(*) into v_count
           from sucursal_taller_f3
           where sucursal_id = :new.sucursal_id;
 
           if v_count > 0 then
-            if :new.factura is null then
-              insert into servicio_laptop_f3(num_servicio, laptop_id, importe, diagnostico, sucursal_id)
-              values(:new.num_servicio, :new.laptop_id, :new.importe, :new.diagnostico, :new.sucursal_id);
-            else
               insert into ti_servicio_laptop_f3(num_servicio, laptop_id, importe, diagnostico, factura, sucursal_id)
               values(:new.num_servicio, :new.laptop_id, :new.importe, :new.diagnostico, :new.factura, :new.sucursal_id);
 
@@ -60,7 +46,6 @@ begin
                 from ti_servicio_laptop_f3
                 where num_servicio = :new.num_servicio
                 and laptop_id = :new.laptop_id;
-            end if;
 
           else
             select count(*) into v_count
@@ -68,10 +53,6 @@ begin
             where sucursal_id = :new.sucursal_id;
 
             if v_count > 0 then
-              if :new.factura is null then
-                insert into servicio_laptop_f4(num_servicio, laptop_id, importe, diagnostico, sucursal_id)
-                values(:new.num_servicio, :new.laptop_id, :new.importe, :new.diagnostico, :new.sucursal_id);
-              else
                 insert into ti_servicio_laptop_f4(num_servicio, laptop_id, importe, diagnostico, factura, sucursal_id)
                 values(:new.num_servicio, :new.laptop_id, :new.importe, :new.diagnostico, :new.factura, :new.sucursal_id);
 
@@ -80,7 +61,6 @@ begin
                   from ti_servicio_laptop_f4
                   where num_servicio = :new.num_servicio
                   and laptop_id = :new.laptop_id;
-              end if;
             else
               raise_application_error(-20020,
                 'Error de integridad para el campo sucursal_id : '
