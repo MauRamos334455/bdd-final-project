@@ -24,7 +24,7 @@ begin
 
     when updating then
       raise_application_error(-20030, 
-        'Las operaciones update no se han sido implementadas');
+        'Las operaciones update no han sido implementadas');
          
     when deleting then
     if fecha_status > to_date('2009-12-31','yyyy-mm-dd') then 

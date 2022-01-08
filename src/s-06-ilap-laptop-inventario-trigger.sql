@@ -34,7 +34,7 @@ begin
 
     when updating then
       raise_application_error(-20030, 
-        'Las operaciones update no se han sido implementadas');
+        'Las operaciones update no han sido implementadas');
     
     when deleting then
       delete from laptop_inventario_f1 where laptop_id = :old.laptop_id;
