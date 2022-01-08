@@ -20,5 +20,6 @@ prompt CREANDO USUARIO: ilap_bdd...
 create user ilap_bdd identified by ilap
 quota unlimited on users;
 grant create session, create table, create procedure, create sequence,
-create view, create synonym, create database link
+create view, create synonym, create database link, create trigger, 
+create directory
 to ilap_bdd;
