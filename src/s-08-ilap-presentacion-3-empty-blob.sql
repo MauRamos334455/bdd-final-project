@@ -101,10 +101,10 @@ prompt cargando sucursal_venta
 prompt cargando laptop (con datos BLOB)
 --laptops sin reemplazo
 --@carga-inicial/laptop-1.sql
-@carga-inicial/laptop-1.sql
+@carga-inicial/laptop-1-empty-blob.sql
 --Algunas de estas laptops tienen reemplazo
 --@carga-inicial/laptop-2.sql
-@carga-inicial/laptop-2.sql
+@carga-inicial/laptop-2-empty-blob.sql
 prompt cargando laptop_inventario
 @carga-inicial/laptop_inventario.sql
 prompt cargando historico_status_laptop
@@ -112,9 +112,9 @@ prompt cargando historico_status_laptop
 @carga-inicial/historico_status_laptop-2.sql
 prompt cargando servicio_laptop (con datos BLOB)
 --@carga-inicial/servicio_laptop-1.sql
-@carga-inicial/servicio_laptop-1.sql
+@carga-inicial/servicio_laptop-1-empty-blob.sql
 --@carga-inicial/servicio_laptop-2.sql
-@carga-inicial/servicio_laptop-2.sql
+@carga-inicial/servicio_laptop-2-empty-blob.sql
 prompt Carga de datos completa. Haciendo commit!
 commit;
 exit
