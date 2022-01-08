@@ -99,7 +99,7 @@ prompt cargando sucursal_venta
 -- id 2001 al 3000
 @carga-inicial/sucursal_venta-2.sql
 prompt cargando laptop (con datos BLOB)
-laptops sin reemplazo
+-- laptops sin reemplazo
 @carga-inicial/laptop-1.sql
 @carga-inicial/laptop-2.sql
 prompt cargando laptop_inventario
