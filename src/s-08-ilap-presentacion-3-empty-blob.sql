@@ -74,30 +74,30 @@ pause => Presionar Enter para Iniciar, Ctrl-C para cancelar
 -- delete from sucursal;
 
 prompt => Realizando Carga de datos ....
--- prompt cargando tipo_tarjeta_video
--- @carga-inicial/tipo_tarjeta_video.sql
--- prompt cargando tipo_procesador
--- @carga-inicial/tipo_procesador.sql
--- prompt cargando tipo_monitor
--- @carga-inicial/tipo_monitor.sql
--- prompt cargando tipo_almacenamiento
--- @carga-inicial/tipo_almacenamiento.sql
--- prompt cargando sucursal
--- @carga-inicial/sucursal-1.sql
--- --es_venta = 1, es_taller = 0
--- @carga-inicial/sucursal-2.sql
--- --es_venta= 1, es_taller = 1
--- @carga-inicial/sucursal-3.sql
--- prompt cargando sucursal_taller
--- -- id 1 al 1000
--- @carga-inicial/sucursal_taller-1.sql
--- -- id 2001 al 3000
--- @carga-inicial/sucursal_taller-2.sql
--- prompt cargando sucursal_venta
--- -- id 1001 al 2000
--- @carga-inicial/sucursal_venta-1.sql
--- -- id 2001 al 3000
--- @carga-inicial/sucursal_venta-2.sql
+prompt cargando tipo_tarjeta_video
+@carga-inicial/tipo_tarjeta_video.sql
+prompt cargando tipo_procesador
+@carga-inicial/tipo_procesador.sql
+prompt cargando tipo_monitor
+@carga-inicial/tipo_monitor.sql
+prompt cargando tipo_almacenamiento
+@carga-inicial/tipo_almacenamiento.sql
+prompt cargando sucursal
+@carga-inicial/sucursal-1.sql
+--es_venta = 1, es_taller = 0
+@carga-inicial/sucursal-2.sql
+--es_venta= 1, es_taller = 1
+@carga-inicial/sucursal-3.sql
+prompt cargando sucursal_taller
+-- id 1 al 1000
+@carga-inicial/sucursal_taller-1.sql
+-- id 2001 al 3000
+@carga-inicial/sucursal_taller-2.sql
+prompt cargando sucursal_venta
+-- id 1001 al 2000
+@carga-inicial/sucursal_venta-1.sql
+-- id 2001 al 3000
+@carga-inicial/sucursal_venta-2.sql
 prompt cargando laptop (con datos BLOB)
 --laptops sin reemplazo
 --@carga-inicial/laptop-1.sql
