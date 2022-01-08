@@ -16,7 +16,7 @@ create or replace function fx_carga_blob(
     v_directory_name in varchar2,
     v_src_file_name in varchar2 ) return blob is
 --variables
-    v_src_blob bfile:=bfilename(v_directory_name,v_src_file_name);
+    v_src_blob bfile:=bfilename(upper(v_directory_name),v_src_file_name);
     v_dest_blob blob := empty_blob();
     v_src_offset number := 1;
     v_dest_offset number :=1;
