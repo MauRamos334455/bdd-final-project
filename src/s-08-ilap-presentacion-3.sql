@@ -101,9 +101,6 @@ prompt cargando sucursal_venta
 prompt cargando laptop (con datos BLOB)
 laptops sin reemplazo
 @carga-inicial/laptop-1.sql
-@carga-inicial/laptop-1.sql
---Algunas de estas laptops tienen reemplazo
---@carga-inicial/laptop-2.sql
 @carga-inicial/laptop-2.sql
 prompt cargando laptop_inventario
 @carga-inicial/laptop_inventario.sql
