@@ -1,7 +1,7 @@
 -- @Autor: Carolina Kennedy Villa
 --         C. Mauricio Ramos Villaseñor
 -- @Fecha creación: 07/01/2021
--- @Descripción: Trigger para operaciones DML en SUCURSAL
+-- @Descripción: Trigger para operaciones DML en LAPTOP INVENTARIO
 
 create or replace trigger t_dml_laptop_inventario
 instead of insert or update or delete on laptop_inventario
