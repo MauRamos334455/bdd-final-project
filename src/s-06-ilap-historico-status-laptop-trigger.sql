@@ -10,15 +10,15 @@ declare
 begin
   case
     when inserting then
-    if fecha_status > to_date('2009-12-31','yyyy-mm-dd') then 
+    if :new.fecha_status > to_date('2009-12-31','yyyy-mm-dd') then 
         insert into historico_status_f1(h_status_laptop_id, fecha_status,status_laptop_id,laptop_id)
         values(:new.h_status_laptop_id, :new.fecha_status, :new.status_laptop_id, :new.laptop_id);
-    elsif fecha_status <= to_date('2009-12-31','yyyy-mm-dd') then 
+    elsif :new.fecha_status <= to_date('2009-12-31','yyyy-mm-dd') then 
         insert into historico_status_f2(h_status_laptop_id, fecha_status,status_laptop_id,laptop_id)
         values(:new.h_status_laptop_id, :new.fecha_status, :new.status_laptop_id, :new.laptop_id);
     else
         raise_application_error(-20010,
-          'Formato invalido para la fecha status'
+          'Formato invalido para la fecha status '
           || 'fecha_status: ' || :new.fecha_status);
     end if;
 
@@ -27,9 +27,9 @@ begin
         'Las operaciones update no han sido implementadas');
          
     when deleting then
-    if fecha_status > to_date('2009-12-31','yyyy-mm-dd') then 
+    if :old.fecha_status > to_date('2009-12-31','yyyy-mm-dd') then 
         delete from historico_status_f1 where h_status_laptop_id = :old.h_status_laptop_id;
-    elsif fecha_status <= to_date('2009-12-31','yyyy-mm-dd') then 
+    elsif :old.fecha_status <= to_date('2009-12-31','yyyy-mm-dd') then 
         delete from historico_status_f2 where h_status_laptop_id = :old.h_status_laptop_id;
     else
         raise_application_error(-20010,
