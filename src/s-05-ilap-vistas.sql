@@ -48,12 +48,12 @@ from laptop_inventario_f1 f1, laptop_inventario_f2 f2
 where f1.laptop_id = f2.laptop_id;
 
 --
--- H_STATUS_LAPTOP
+-- historico_status_LAPTOP
 --
 create or replace view historico_status_laptop as
-select h_status_laptop_id, laptop_id, fecha_status, status_laptop_id from historico_status_f1
+select historico_status_laptop_id, laptop_id, fecha_status, status_laptop_id from historico_status_laptop_f1
 union all
-select h_status_laptop_id, laptop_id, fecha_status, status_laptop_id from historico_status_f2;
+select historico_status_laptop_id, laptop_id, fecha_status, status_laptop_id from historico_status_laptop_f2;
 
 --
 -- TIPO_MONITOR
