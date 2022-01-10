@@ -47,7 +47,7 @@ begin
         'Las operaciones update no se han sido implementadas');
     
     when deleting then
-      if :old.es_taller = 1 and :old.es_venta = 1 and (substr(:new.clave, 3,2) in ('NO','EA', 'SO', 'WS')) then
+      if :old.es_taller = 1 and :old.es_venta = 1 and (substr(:old.clave, 3,2) in ('NO','EA', 'SO', 'WS')) then
         delete from sucursal_f1 where sucursal_id = :old.sucursal_id;
       elsif (:old.es_taller = 1 and :old.es_venta = 0) or 
       (:old.es_taller = 0 and :old.es_venta = 1) then
