@@ -10,12 +10,12 @@ declare
 begin
   case
     when inserting then
-      if :new.es_taller = 1 and :new.es_venta = 1 then
+      if :new.es_taller = 1 and :new.es_venta = 1 and (substr(:new.clave, 3,2) in ('NO','EA', 'SO', 'WS')) then
         insert into sucursal_f1(sucursal_id, clave, es_taller, es_venta, nombre, latitud, longitud, url)
         values(:new.sucursal_id, :new.clave, :new.es_taller, :new.es_venta, :new.nombre, :new.latitud, :new.longitud, :new.url);
       elsif (:new.es_taller = 1 and :new.es_venta = 0) or 
       (:new.es_taller = 0 and :new.es_venta = 1) then
-        if substr(:new.clave, 3,2) = 'NO' then 
+        if substr(:new.clave, 3,2) = 'NO' then
           insert into sucursal_f1(sucursal_id, clave, es_taller, es_venta, nombre, latitud, longitud, url)
           values(:new.sucursal_id, :new.clave, :new.es_taller, :new.es_venta, :new.nombre, :new.latitud, :new.longitud, :new.url);
         elsif substr(:new.clave, 3,2) = 'EA' then 
@@ -35,9 +35,10 @@ begin
         end if;
       else
         raise_application_error(-20010,
-        'Valor incorrecto para el campo es_taller o es_venta'
+        'Valor incorrecto para el campo es_taller o es_venta o clave'
         || 'es_taller: ' || :new.es_taller
-        || 'es_venta: ' || :new.es_venta
+        || 'es_venta: '  || :new.es_venta
+        || 'clave: '     || :new.clave
         || 'Sólo se permite: 11, 10 o 01');
       end if;
 
