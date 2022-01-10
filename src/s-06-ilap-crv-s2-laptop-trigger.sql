@@ -67,8 +67,8 @@ begin
         else 
           raise_application_error(-20010,
             'Valor incorrecto para el numero de serie'
-            || 'num_serie: ' || :new.num_serie
-            || 'Sólo se permite: 0,1,2,3,4,5,6,7,8 o 9');
+            || ' num_serie: ' || :new.num_serie
+            || ' Sólo se permite: 0,1,2,3,4,5,6,7,8 o 9');
         end if;
         
         delete from laptop_f5 where laptop_id = :old.laptop_id;

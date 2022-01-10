@@ -30,16 +30,16 @@ begin
         else
           raise_application_error(-20010,
             'Valor incorrecto para la clave'
-            || 'clave: ' || :new.clave
-            || 'Sólo se permite: NO, EA, WS o SO');
+            || ' clave: ' || :new.clave
+            || ' Sólo se permite: NO, EA, WS o SO');
         end if;
       else
         raise_application_error(-20010,
         'Valor incorrecto para el campo es_taller o es_venta o clave'
-        || 'es_taller: ' || :new.es_taller
-        || 'es_venta: '  || :new.es_venta
-        || 'clave: '     || :new.clave
-        || 'Sólo se permite: 11, 10 o 01');
+        || ' es_taller: ' || :new.es_taller
+        || ' es_venta: '  || :new.es_venta
+        || ' clave: '     || :new.clave
+        || ' Sólo se permiten: 11, 10 o 01. Y para clave: NO, EA, WS o SO');
       end if;
 
     when updating then
@@ -47,7 +47,7 @@ begin
         'Las operaciones update no se han sido implementadas');
     
     when deleting then
-      if :old.es_taller = 1 and :old.es_venta = 1 then
+      if :old.es_taller = 1 and :old.es_venta = 1 and (substr(:new.clave, 3,2) in ('NO','EA', 'SO', 'WS')) then
         delete from sucursal_f1 where sucursal_id = :old.sucursal_id;
       elsif (:old.es_taller = 1 and :old.es_venta = 0) or 
       (:old.es_taller = 0 and :old.es_venta = 1) then
@@ -62,15 +62,16 @@ begin
         else
           raise_application_error(-20010,
             'Valor incorrecto para la clave al eliminar'
-            || 'clave: ' || :old.clave
-            || 'Sólo se permite: NO, EA, WS o SO');
+            || ' clave: ' || :old.clave
+            || ' Sólo se permite: NO, EA, WS o SO');
         end if;
       else
         raise_application_error(-20010,
-        'Valor incorrecto para el campo es_taller o es_venta al eliminar'
-        || 'es_taller: ' || :old.es_taller
-        || 'es_venta: ' || :old.es_venta
-        || 'Sólo se permite: 11, 10 o 01');
+        'Valor incorrecto para el campo es_taller o es_venta o clave al eliminar'
+        || ' es_taller: ' || :old.es_taller
+        || ' es_venta: ' || :old.es_venta
+        || ' Sólo se permite: 11, 10 o 01.'
+        || ' Sólo se permite: NO, EA, WS o SO.');
       end if;
   end case;
 end;
