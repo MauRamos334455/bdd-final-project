@@ -17,7 +17,7 @@ con Oracle Linux conectados por medio de una VPN (Hamachi VPN)
 El proyecto consta de las siguientes carpetas
 - **docs** Reportes acerca del diseño
 - **models** Diseños lógicos y físicos en E/RStudio y lógicos en .png
-- **src:** Código fuente del proyecto, scripts sql para ejecución del proyecto.
+- **src** Código fuente del proyecto, scripts sql para ejecución del proyecto.
 
 ## Dependencias
 Para la correcta ejecución del proyecto es necesario:
